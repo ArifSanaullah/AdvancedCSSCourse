@@ -4,7 +4,7 @@
   "description": "My first Sass project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass" : "node-sass ./Sass/main.scss ./css/styles.css -w"
   },
   "repository": {
     "type": "git",
