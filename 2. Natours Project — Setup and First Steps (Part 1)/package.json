@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "My first Sass project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArifSanaullah/AdvancedCSSCourse.git"
+  },
+  "author": "ArifSanaullah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArifSanaullah/AdvancedCSSCourse/issues"
+  },
+  "homepage": "https://github.com/ArifSanaullah/AdvancedCSSCourse#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
