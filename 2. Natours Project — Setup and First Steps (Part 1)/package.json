@@ -4,11 +4,15 @@
   "description": "My first Sass project",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass ./Sass/main.scss ./css/style.css -w",
-    "compile:sass": "node-sass ./Sass/main.scss ./css/style.comp.css",
-    "concat:css": "concat -o ./css/style.concat.css ./css/icon-fonts.css ./css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' ./css/style.concat.css -o ./css/style.prefix.css",
-    "compress:css": "node-sass -o ./css/style.css ./css/style.prefix.css --output-style compressed"
+    "watch:sass": "node-sass Sass/main.scss css/style.css -w",
+
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass Sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-fonts.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
   },
   "repository": {
     "type": "git",
@@ -20,7 +24,9 @@
     "url": "https://github.com/ArifSanaullah/AdvancedCSSCourse/issues"
   },
   "homepage": "https://github.com/ArifSanaullah/AdvancedCSSCourse#readme",
-  "dependencies": {},
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  },
   "devDependencies": {
     "autoprefixer": "^9.7.3",
     "concat": "^1.0.3",
