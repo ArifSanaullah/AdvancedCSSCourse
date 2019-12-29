@@ -1368,8 +1368,8 @@ body {
 
 .navigation__btn {
   background-color: #fff;
-  height: 7rem;
-  width: 7rem;
+  height: 5rem;
+  width: 5rem;
   text-align: center;
   position: fixed;
   top: 6rem;
@@ -1390,19 +1390,19 @@ body {
       right: 3rem; } }
 
 .navigation__background {
-  height: 6rem;
-  width: 6rem;
+  height: 4.8rem;
+  width: 4.8rem;
   border-radius: 50%;
   position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
+  top: 6.1rem;
+  right: 6.1rem;
   background-image: radial-gradient(#7ed56f, #55c57a);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
   @media only screen and (max-width: 56.25em) {
     .navigation__background {
-      top: 3.5rem;
-      right: 4.5rem; } }
+      top: 3rem;
+      right: 4rem; } }
   @media only screen and (max-width: 37.5em) {
     .navigation__background {
       top: 3.5rem;
@@ -1459,9 +1459,9 @@ body {
 
 .navigation__icon {
   position: relative;
-  margin-top: 3.5rem; }
+  margin-top: 2.5rem; }
   .navigation__icon, .navigation__icon::before, .navigation__icon:after {
-    width: 3rem;
+    width: 2.3rem;
     height: 2px;
     background-color: #333;
     display: inline-block;
