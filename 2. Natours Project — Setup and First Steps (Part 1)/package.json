@@ -4,7 +4,11 @@
   "description": "My first Sass project",
   "main": "index.js",
   "scripts": {
-    "compile:sass" : "node-sass ./Sass/main.scss ./css/styles.css -w"
+    "watch:sass": "node-sass ./Sass/main.scss ./css/style.css -w",
+    "compile:sass": "node-sass ./Sass/main.scss ./css/style.comp.css",
+    "concat:css": "concat -o ./css/style.concat.css ./css/icon-fonts.css ./css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' ./css/style.concat.css -o ./css/style.prefix.css",
+    "compress:css": "node-sass -o ./css/style.css ./css/style.prefix.css --output-style compressed"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,9 @@
   "homepage": "https://github.com/ArifSanaullah/AdvancedCSSCourse#readme",
   "dependencies": {},
   "devDependencies": {
-    "node-sass": "^4.13.0"
+    "autoprefixer": "^9.7.3",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.0",
+    "postcss-cli": "^6.1.3"
   }
 }
