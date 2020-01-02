@@ -53,7 +53,11 @@
 //   }
 // }
 // } */
-.main {
+
+
+
+
+/* .main {
   background-color: red;
   font-size: 20px;
   color: #fff;
@@ -64,7 +68,7 @@
   grid-template-columns: repeat(4, [col-start] 1fr);
   grid-row-gap: 30px;
   grid-column-gap: 30px;
-  grid-template-areas: "head head head head" "box box box side" "";
+  grid-template-areas: "head head head head" "box box box side" "main main main side" "main main main side" "foot foot foot foot";
 }
 .header {
     grid-area: row-start 1 / col-start 1 / row-start 2 / col-start 5;
@@ -82,4 +86,83 @@
 }
 .footer {
     grid-area: 5/1/-1/-1;
+} */
+
+
+
+/* 
+.container {
+    width: 800px;
+    height: 800px;
+    margin: 30px auto;
+    background-color: #eeeeee;
+
+    display: grid;
+    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(2, 200px);
+    grid-gap: 30px;
+    grid-auto-columns: .5fr;
+    grid-auto-flow: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+.item {
+    padding: 10px;
+    color: #ffffff;
+    font-size: 30px;
+    background-color: #ff0000;
+}
+.item--1 {
+    align-self: start;
+} */
+
+
+
+
+.container {
+    /* width: 800px; */
+    /* height: 800px; */
+    margin: 30px auto;
+    background-color: #eeeeee;
+
+    display: grid;
+    /* grid-template-rows: repeat(2, minmax(150px, max-content));
+    grid-template-columns: repeat(4, min-content); */
+
+    grid-template-rows: repeat(2, minmax(150px, min-content));
+    /* grid-template-columns: repeat(8, minmax(100px, max-content)); */
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+}
+.item {
+    padding: 10px;
+    color: #ffffff;
+    font-size: 30px;
+    background-color: #ff0000;
+}
+.item--1 {
+    background-color: coral;
+}
+.item--2 {
+    background-color: rosybrown;
+}
+.item--3 {
+    background-color: royalblue;
+}
+.item--4 {
+    background-color: crimson;
+}
+.item--5 {
+    background-color: palegreen;
+}
+.item--6 {
+    background-color: palevioletred;
+}
+.item--7 {
+    background-color: burlywood;
+}
+.item--8 {
+    background-color: darkcyan;
 }
